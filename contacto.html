@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Envía un mensaje</h2>
+            <form id="formularioContacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" maxlength="50" required>
+                
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" required>
+            
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" required minlength="10" maxlength="300"></textarea>
+                
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" required>
+                    <option value="">--Seleccione una categoría--</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="reclamo">Reclamo</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="otro">Otro</option>
+                </select>
+            
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="salidaFormulario" class="error"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 autosusados</p>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>
