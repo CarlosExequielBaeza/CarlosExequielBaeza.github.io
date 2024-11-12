@@ -3,20 +3,38 @@ window.onload = function () {
     var totalItems = items.length;
     var indiceActual = 0;
 
+    var arregloCarrusel = [];
+    for (i = 0; i < totalItems; i++) {
+        arregloCarrusel[i] = items[i];
+    }
+
     function actualizarCarrusel() {
         var desplazamiento = -(100 * indiceActual / totalItems); 
         document.querySelector('.carrusel-contenido').style.transform = 'translateX(' + desplazamiento + '%)';
-    }
-
-    document.querySelector('.carrusel-control.siguiente').onclick = function () {
+    } 
+    function siguienteItem() {
         indiceActual = (indiceActual + 1) % totalItems;
         actualizarCarrusel();
-    };
+    }
 
-    document.querySelector('.carrusel-control.anterior').onclick = function () {
+    
+    function anteriorItem() {
         indiceActual = (indiceActual - 1 + totalItems) % totalItems;
         actualizarCarrusel();
+    }
+
+    var siguiente = document.querySelector('.carrusel-control.siguiente');
+    var anterior = document.querySelector('.carrusel-control.anterior');
+
+    siguiente.onclick = function () {
+        siguienteItem();
     };
+
+    anterior.onclick = function () {
+        anteriorItem();
+    };
+
+
 
     actualizarCarrusel();
 };
