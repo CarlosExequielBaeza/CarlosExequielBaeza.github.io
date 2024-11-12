@@ -1,3 +1,4 @@
+/* RESET */
 html, body {
     height: 100%;
     margin: 0;
@@ -7,38 +8,119 @@ html, body {
     line-height: 1.6;
 }
 
+/* CABECERA */
 header {
-    background: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
 }
 
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* MENÚ */
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin-right: 20px;
 }
 
 nav a {
-    color: white;
+    color: #333;
     text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #007BFF;
+}
+
+/* PRINCIPAL */
 main {
     flex: 1;
     padding: 20px;
 }
 
+/* PIE DE PÁGINA */
 footer {
-    background: #333;
+    background: #585858;
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+/* REDES */
+.social-icon i {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover i {
+    transform: scale(1.2);
+    color: #ddd;
+}
+
+/* SERVICIOS */
+#servicios {
+    flex: 1;
+    min-width: 300px;
+}
+
+.servicios-lista {
+    list-style-type: none;
+    padding: 0;
+}
+
+.servicios-lista li {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.servicios-lista li i {
+    margin-right: 10px;
+    color: #9adee7;
+}
+
+#servicios h2 {
+    font-size: 35px;
+    color: #1e90ff;
+}
+
+/* DISEÑO */
+.contenido {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#vehiculos {
+    flex: 2;
+    min-width: 300px;
+}
+
+#servicios {
+    flex: 1;
 }
 
 .lista-vehiculos {
@@ -48,15 +130,25 @@ footer {
 }
 
 .vehiculo {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 30%;
+    border: 10px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+.vehiculo-img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 h2 {
     color: #333;
 }
 
+/* BOTONES */
 .btn {
     display: inline-block;
     background: #007BFF;
@@ -72,4 +164,182 @@ h2 {
     padding: 10px;
     background: #f8d7da;
     color: red;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#salidaFormulario.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* CARRUSEL */
+.carrusel {
+    border: 3px solid white;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carrusel-contenido {
+    width: 600%;
+    display: flex;
+    transition: transform 0.5s ease;
+    background-color: #afe6fc4d;
+}
+
+.carrusel-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel-item img {
+    width: calc(100% / 2);
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.carrusel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.583);
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.carrusel-control.anterior {
+    left: 10px;
+}
+
+.carrusel-control.siguiente {
+    right: 10px;
+}
+
+.carrusel-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.carrusel-footer button {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.carrusel-footer button:hover {
+    background-color: #ff3e00;
+}
+
+/* ARTÍCULOS */
+#articulos {
+    margin-top: 20px;
+}
+
+.contenido-articulos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.articulo {
+    flex: 1;
+    min-width: 280px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 10px 0;
+}
+
+.articulo h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #1e90ff;
+}
+
+.articulo p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* FORMULARIO DE CONTACTO */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* CONSULTAS DE MEDIOS */
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+    }
+
+    #vehiculos, #servicios {
+        min-width: 100%;
+    }
 }

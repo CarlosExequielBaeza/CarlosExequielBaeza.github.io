@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehículos Usados</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>AutoUsados</h1>
+            <a href="index.html"> 
+            <img src="imagenes/autosusados.png" alt="Logo AutoUsados" class="logo-img" />
+            </a>
+            <h1>AutoUsados.com</h1>
         </div>
         <nav>
             <ul>
@@ -21,39 +25,98 @@
     </header>
 
     <main>
-        <section id="vehiculos">
-            <h2>Vehículos que estan disponibles</h2>
-            <div class="lista-vehiculos">
-                <div class="vehiculo">
-                    <h3>Ford Fiesta 2020</h3>
-                    <p>Precio: $12,000</p>
-                    <p>Kilómetros: 15,000 km</p>
-                    <a href="#" class="btn">Detalles</a>
+        <section id="carrusel">
+            <div class="carrusel">
+                <div class="carrusel-contenido">
+                    <div class="carrusel-item">
+                        <img src="imagenes/imagen1.jpeg" alt="imagen 1" />   
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="imagenes/imagen2.jpg" alt="imagen 2"/>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="imagenes/imagen3.jpg" alt="imagen 3"/>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="imagenes/imagen4.jpg" alt="imagen 4"/>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="imagenes/imagen5.jpg" alt="imagen 5"/>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="imagenes/imagen6.jpg" alt="imagen 6"/>
+                    </div>
                 </div>
-                <div class="vehiculo">
-                    <h3>Volkswagen Golf 2019</h3>
-                    <p>Precio: $15,500</p>
-                    <p>Kilómetros: 10,000 km</p>
-                    <a href="#" class="btn">Detalles</a>
-                </div>
-                <div class="vehiculo">
-                    <h3>Toyota Corolla 2021</h3>
-                    <p>Precio: $180,000</p>
-                    <p>Kilómetros: 5,000 km</p>
-                    <a href="#" class="btn">Detalles</a>
+                <button class="carrusel-control anterior">&#10094;</button>
+                <button class="carrusel-control siguiente">&#10095;</button>
+                <div class="carrusel-footer">
+                    <button class="btn-conocer">Conocé más</button>
                 </div>
             </div>
-        </section>
+            <div class="contenido">
+                <section id="vehiculos">
+                    <h2>Vehículos que están disponibles</h2>
+                    <div class="lista-vehiculos">
+                        <div class="vehiculo">
+                            <img src="imagenes/FIESTA.jpg" alt="Ford Fiesta 2020" class="vehiculo-img">
+                            <h3>Ford Fiesta 2020</h3>
+                            <p>Precio: $12,000</p>
+                            <p>Kilómetros: 15,000 km</p>
+                            <a href="#" class="btn">Detalles</a>
+                        </div>
+                        <div class="vehiculo">
+                            <img src="imagenes/kangoo.jpg" alt="Renault Kangoo 2015" class="vehiculo-img">
+                            <h3>Renault Kangoo 2015</h3>
+                            <p>Precio: $12,000</p>
+                            <p>Kilómetros: 15,000 km</p>
+                            <a href="#" class="btn">Detalles</a>
+                        </div>
+                        <div class="vehiculo">
+                            <img src="imagenes/volkswagen-golf-prueba-p.jpg" alt="Volkswagen Golf 2019" class="vehiculo-img">
+                            <h3>Volkswagen Golf 2019</h3>
+                            <p>Precio: $15,500</p>
+                            <p>Kilómetros: 10,000 km</p>
+                            <a href="#" class="btn">Detalles</a>
+                        </div>
+                        <div class="vehiculo">
+                            <img src="imagenes/F100.jpg" alt="Ford F100 1986" class="vehiculo-img">
+                            <h3>Ford F100 1986</h3>
+                            <p>Precio: $180,000</p>
+                            <p>Kilómetros: 5,000 km</p>
+                            <a href="#" class="btn">Detalles</a>
+                        </div>
+                    </div>
+                </section>
 
-        <section id="servicios">
-            <h2>Servicios</h2>
-            <p>Ofrecemos financiación, garantía y entrega a domicilio.</p>
+                <section id="servicios">
+                    <h2>Servicios</h2>
+                    <ul class="servicios-lista">
+                        <li><i class="fas fa-car"></i> Financiación</li>
+                        <li><i class="fas fa-shield-alt"></i> Garantía</li>
+                        <li><i class="fas fa-truck"></i> Entrega a domicilio</li>
+                        <li><i class="fas fa-cogs"></i> Servicio Postventa</li>
+                    </ul>
+                </section>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 AutoUsados. Todos los derechos reservados.</p>
+        <div class="redes">
+            <p>Síguenos en nuestras redes sociales:</p>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 autousados.com Todos los derechos reservados.</p>
         <p><a href="#privacidad">Política de Privacidad</a> | <a href="#terminos">Términos de Servicio</a></p>
     </footer>
+    <script src="js.js"></script>
 </body>
 </html>

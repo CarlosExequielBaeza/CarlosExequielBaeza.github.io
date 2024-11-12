@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Encabezado con logo e imagen -->
     <header>
-        <h1>Contacto</h1>
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagenes/autosusados.png" alt="Logo AutoUsados" class="logo-img" />
+            </a>
+            <h1>AutoUsados.com</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -21,7 +27,7 @@
     <main>
         <section>
             <h2>Envía un mensaje</h2>
-            <form id="formularioContacto">
+            <form id="formularioContacto" novalidate>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" maxlength="50" required>
                 
@@ -42,12 +48,13 @@
             
                 <button type="submit">Enviar</button>
             </form>
-            <div id="salidaFormulario" class="error"></div>
+            <div id="salidaFormulario"></div> <!-- Eliminada la clase error -->
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 autosusados</p>
+        <p>&copy; 2024 autousados.com Todos los derechos reservados.</p>
+        <p><a href="#privacidad">Política de Privacidad</a> | <a href="#terminos">Términos de Servicio</a></p>
     </footer>
 
     <script src="js.js"></script>
