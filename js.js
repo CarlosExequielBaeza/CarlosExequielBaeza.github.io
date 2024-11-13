@@ -1,43 +1,48 @@
 window.onload = function () {
-    var items = document.querySelectorAll('.carrusel-item');
-    var totalItems = items.length;
+    var imagenes = [
+        'imagenes/imagen1.jpeg',
+        'imagenes/imagen2.jpg',
+        'imagenes/imagen3.jpg',
+        'imagenes/imagen4.jpg',
+        'imagenes/imagen5.jpg',
+        'imagenes/imagen6.jpg'
+    ];
+    
+    var total = imagenes.length;
     var indiceActual = 0;
 
-    var arregloCarrusel = [];
-    for (i = 0; i < totalItems; i++) {
-        arregloCarrusel[i] = items[i];
-    }
+    // Seleccionamos el único elemento <img> en el carrusel
+    var item = document.querySelector('.carrusel-contenido img');
 
     function actualizarCarrusel() {
-        var desplazamiento = -(100 * indiceActual / totalItems); 
-        document.querySelector('.carrusel-contenido').style.transform = 'translateX(' + desplazamiento + '%)';
-    } 
+        
+        item.src = imagenes[indiceActual];
+    }
+
     function siguienteItem() {
-        indiceActual = (indiceActual + 1) % totalItems;
+        indiceActual = (indiceActual + 1) % total;
         actualizarCarrusel();
     }
 
-    
     function anteriorItem() {
-        indiceActual = (indiceActual - 1 + totalItems) % totalItems;
+        indiceActual = (indiceActual - 1 + total) % total;
         actualizarCarrusel();
     }
 
-    var siguiente = document.querySelector('.carrusel-control.siguiente');
-    var anterior = document.querySelector('.carrusel-control.anterior');
-
-    siguiente.onclick = function () {
+    document.querySelector('.carrusel-control.siguiente').onclick = function () {
         siguienteItem();
     };
 
-    anterior.onclick = function () {
+    document.querySelector('.carrusel-control.anterior').onclick = function () {
         anteriorItem();
     };
 
-
-
+    // Inicializa el carrusel mostrando la primera imagen
     actualizarCarrusel();
 };
+
+
+
 /*******************************/ 
 
 document.getElementById('formularioContacto').addEventListener('submit', function(event) {

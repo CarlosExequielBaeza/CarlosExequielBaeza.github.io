@@ -177,7 +177,7 @@ h2 {
 
 /* CARRUSEL */
 .carrusel {
-    border: 3px solid white;
+    border: 2px solid white;
     width: 100%;
     height: auto;
     position: relative;
@@ -186,26 +186,24 @@ h2 {
 }
 
 .carrusel-contenido {
-    width: 600%;
+    width: 100%;
     display: flex;
     transition: transform 0.5s ease;
     background-color: #afe6fc4d;
+    justify-content: center; /* Centra las imágenes */
+    align-items: center; /* Asegura que las imágenes estén alineadas */
 }
 
-.carrusel-item {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Eliminar .carrusel-item y mover sus reglas a las imágenes dentro del contenedor */
+.carrusel-contenido img {
+    width: calc(100% / 2);  /* Ancho de cada imagen */
+    height: auto;           /* Mantiene la proporción de la imagen */
+    object-fit: cover;    /* Asegura que la imagen se ajuste correctamente */
+    border-radius: 5px;     /* Bordes redondeados */
+    display: block;         /* Elimina espacio debajo de la imagen */
 }
 
-.carrusel-item img {
-    width: calc(100% / 2);
-    height: auto;
-    object-fit: contain;
-    border-radius: 5px;
-}
-
+/* Estilos para los controles del carrusel */
 .carrusel-control {
     position: absolute;
     top: 50%;
