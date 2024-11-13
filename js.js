@@ -11,7 +11,7 @@ window.onload = function () {
     var total = imagenes.length;
     var indiceActual = 0;
 
-    // Seleccionamos el único elemento <img> en el carrusel
+    
     var item = document.querySelector('.carrusel-contenido img');
 
     function actualizarCarrusel() {
@@ -37,7 +37,7 @@ window.onload = function () {
         anteriorItem();
     };
 
-    // Inicializa el carrusel mostrando la primera imagen
+    
     actualizarCarrusel();
 };
 
